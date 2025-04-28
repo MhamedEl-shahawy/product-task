@@ -1,48 +1,48 @@
 import Image from "next/image";
+import Header from "@/components/Header";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen py-8 px-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <Image
-            src="/logo.png"
-            alt="Company Logo"
-            width={200}
-            height={80}
-            className="mx-auto mb-8"
-          />
-          <h1 className="text-4xl font-bold mb-4">About Our Company</h1>
-          <p className="text-xl text-gray-600">
-            Leading the way in product innovation and customer satisfaction
-          </p>
+    <>
+      <Header activePage="about" />
+      <main className="min-h-screen bg-white py-12">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="flex justify-center mb-16">
+            <Image
+              src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e1071df3-9a34-455d-8074-f384b75f3b10"
+              alt="NHC Logo"
+              width={242}
+              height={250}
+            />
+          </div>
+
+          <div className="space-y-8">
+            <section>
+              <h2 className="text-[#285f9d] text-base leading-[31px] mb-4">
+                About NHC National Housing Company
+              </h2>
+              <p className="font-['Abel'] text-base leading-[31px]">
+                NHC was established in 2016 under Royal Decree No. 7262, on
+                8/2/1437 AH to be the investment arm of the initiatives and
+                programs of the Ministry of Municipal and Rural Affairs and
+                Housing in the real estate, residential and commercial
+                sectors...
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-base leading-[31px] mb-4">
+                National Housing Strategy
+              </h2>
+              <p className="font-['Abel'] text-base leading-[31px]">
+                The NHC Strategy aims for the Company to be an enabler of the
+                real estate supply system by empowering the private sector to
+                develop the real estate market...
+              </p>
+            </section>
+          </div>
         </div>
-
-        <div className="prose prose-lg mx-auto">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-
-          <h2>Our Mission</h2>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </p>
-
-          <h2>Our Values</h2>
-          <ul>
-            <li>Quality First</li>
-            <li>Customer Satisfaction</li>
-            <li>Innovation</li>
-            <li>Integrity</li>
-          </ul>
-        </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
