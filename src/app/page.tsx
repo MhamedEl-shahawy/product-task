@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Suspense } from "react";
 import { searchProducts } from "@/lib/api";
-import Header from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
 import ProductCard from "@/components/ProductCard";
+import Header from "@/components/Header";
 import NoResults from "@/components/NoResults";
 
 export default async function Home({
