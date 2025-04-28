@@ -34,12 +34,7 @@ export default function SearchBar() {
           className="absolute right-4 top-1/2 -translate-y-1/2"
           aria-label="Search"
         >
-          <Image
-            src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5259e072-726d-4395-978c-b041b3dec40c"
-            alt=""
-            width={24}
-            height={24}
-          />
+          <Image src="/Search.svg" alt="search icon" width={24} height={24} />
         </button>
       </form>
     </div>

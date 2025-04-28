@@ -4,8 +4,8 @@ export default function NoResults() {
   return (
     <div className="flex flex-col items-center mt-10">
       <Image
-        src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0670919f-e533-4243-b005-eecbe0293c30"
-        alt=""
+        src="/no_result.svg"
+        alt="no result"
         width={156}
         height={161}
         className="mb-2"

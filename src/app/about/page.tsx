@@ -9,7 +9,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex justify-center mb-16">
             <Image
-              src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e1071df3-9a34-455d-8074-f384b75f3b10"
+              src="/company_logo_big.svg"
               alt="NHC Logo"
               width={242}
               height={250}

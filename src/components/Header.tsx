@@ -10,7 +10,7 @@ export default function Header({ activePage }: HeaderProps) {
     <header className="w-full h-20 bg-[#d9d9d9]">
       <div className="max-w-7xl mx-auto h-full px-6 flex items-center">
         <Image
-          src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2eb464fc-a170-452d-a67c-8927e867d327"
+          src="/company_logo.svg"
           alt="Company Logo"
           width={58}
           height={60}
