@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 export default function SearchBar() {
   const router = useRouter();
@@ -16,34 +17,31 @@ export default function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-2xl mx-auto">
-      <div className="relative">
+    <div className="w-full max-w-[739px] mx-auto">
+      <h2 className="text-[#285f9d] text-lg font-medium mb-2">
+        Search products by keyword
+      </h2>
+      <form onSubmit={handleSubmit} className="relative">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search products..."
-          className="w-full h-12 px-4 pr-12 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+          placeholder="Search keyword"
+          className="w-full h-[50px] px-4 pr-12 rounded-lg bg-[#f3f3f3] border border-[#006483] text-sm"
         />
         <button
           type="submit"
-          className="absolute right-3 top-1/2 -translate-y-1/2"
+          className="absolute right-4 top-1/2 -translate-y-1/2"
+          aria-label="Search"
         >
-          <svg
-            className="w-6 h-6 text-gray-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
+          <Image
+            src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5259e072-726d-4395-978c-b041b3dec40c"
+            alt=""
+            width={24}
+            height={24}
+          />
         </button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }

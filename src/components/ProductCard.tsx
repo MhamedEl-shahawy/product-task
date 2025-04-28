@@ -8,31 +8,30 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden">
-      <div className="relative h-48">
+    <div className="w-[301px] h-[312px] bg-white rounded-[10px] shadow-lg overflow-hidden">
+      <div className="relative h-[150px] mx-2 mt-2">
         <Image
           src={product.thumbnail}
           alt={product.title}
           fill
-          className="object-cover"
+          className="object-cover rounded-[10px]"
         />
       </div>
-      <div className="p-4">
-        <h2 className="text-xl font-semibold text-gray-800 mb-2">
-          {product.title}
-        </h2>
-        <p className="text-gray-600 mb-4 line-clamp-2">{product.description}</p>
-        <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-blue-600">
-            ${product.price}
-          </span>
-          <Link
-            href={`/products/${product.id}`}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            More
-          </Link>
-        </div>
+      <div className="p-3 space-y-1.5">
+        <h3 className="text-[#285f9d] text-xl font-medium">{product.title}</h3>
+        <p className="text-[#7f7f7f] text-base line-clamp-2">
+          {product.description}
+        </p>
+        <p className="text-base">
+          Price:{" "}
+          <span className="text-[#285f9d] font-medium">${product.price}</span>
+        </p>
+        <Link
+          href={`/products/${product.id}`}
+          className="inline-block w-[85px] h-10 bg-[#285f9d] text-white text-base rounded-[5px] text-center leading-10 hover:bg-[#1d4673] transition-colors"
+        >
+          More
+        </Link>
       </div>
     </div>
   );
