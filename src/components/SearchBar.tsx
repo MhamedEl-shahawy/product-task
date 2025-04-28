@@ -17,26 +17,21 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="w-full max-w-[739px] mx-auto">
-      <h2 className="text-[#285f9d] text-lg font-medium mb-2">
-        Search products by keyword
-      </h2>
-      <form onSubmit={handleSubmit} className="relative">
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search keyword"
-          className="w-full h-[50px] px-4 pr-12 rounded-lg bg-[#f3f3f3] border border-[#006483] text-sm"
-        />
-        <button
-          type="submit"
-          className="absolute right-4 top-1/2 -translate-y-1/2"
-          aria-label="Search"
-        >
-          <Image src="/Search.svg" alt="search icon" width={24} height={24} />
-        </button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit} className="relative w-full">
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search keyword"
+        className="w-full h-[50px] px-4 pr-12 rounded-lg bg-[#f3f3f3] border border-[#006483] text-sm text-black placeholder:text-[#7f7f7f] font-['Inter']"
+      />
+      <button
+        type="submit"
+        className="absolute right-4 top-1/2 -translate-y-1/2"
+        aria-label="Search"
+      >
+        <Image src="/Search.svg" alt="" width={24} height={24} />
+      </button>
+    </form>
   );
 }
