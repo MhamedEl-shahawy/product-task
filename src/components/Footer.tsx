@@ -1,40 +1,28 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-8">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">About Us</h3>
-            <p className="text-gray-400">
-              We provide high-quality products at competitive prices.
-            </p>
+    <footer className="bg-[#292759] text-white py-14 px-[120px]">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-8">
+            <Image
+              src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/321510aa-9ce2-43f2-8ea5-56c7747c9a92"
+              alt="NHC Logo"
+              width={31}
+              height={32}
+            />
+            <Image
+              src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/eaef4ed2-288a-4c04-b98e-e7e979be32c5"
+              alt="Vision 2030 Logo"
+              width={48}
+              height={32}
+            />
           </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="/" className="text-gray-400 hover:text-white">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="text-gray-400 hover:text-white">
-                  About
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <p className="text-gray-400">
-              Email: info@example.com
-              <br />
-              Phone: (123) 456-7890
-            </p>
-          </div>
-        </div>
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          © 2024 Your Company. All rights reserved.
+          <p className="font-['Abel'] text-sm leading-6">
+            All rights reserved © 2022 - Developed and operated by National
+            Housing
+          </p>
         </div>
       </div>
     </footer>
