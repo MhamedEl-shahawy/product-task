@@ -5,25 +5,31 @@ import SearchBar from "@/components/SearchBar";
 import ProductCard from "@/components/ProductCard";
 import Header from "@/components/Header";
 import NoResults from "@/components/NoResults";
+import Footer from "@/components/Footer";
 
 export default async function Home({
   searchParams,
 }: {
   searchParams: { q?: string };
 }) {
-  const query = searchParams.q || "";
-  const products = query ? await searchProducts(query) : null;
+  const query = searchParams?.q ?? "";
+  const products = !!query ? await searchProducts(query) : null;
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-white">
       <Header activePage="products" />
-      <main className="min-h-screen bg-white py-12">
-        <div className="max-w-7xl mx-auto px-4">
+
+      <main className="flex-1 flex flex-col items-center pt-[120px] pb-16 px-4">
+        <div className="w-full max-w-[739px] mx-auto">
+          <h2 className="text-[#285f9d] text-lg font-medium font-['Inter'] mb-6 text-center">
+            Search products by keyword
+          </h2>
+
           <SearchBar />
 
-          {query && (
+          {!!query && (
             <div className="mt-8">
-              <p className="text-base">
+              <p className="text-base font-['Inter']">
                 Total results count:{" "}
                 <span className="text-[#285f9d] font-bold">
                   {products?.total || 0}
@@ -43,6 +49,6 @@ export default async function Home({
           )}
         </div>
       </main>
-    </>
+    </div>
   );
 }
