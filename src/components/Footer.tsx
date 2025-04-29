@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#292759] text-white py-12 px-6 md:px-[120px]">
+    <footer className="bg-[#292759] text-white py-11 px-6 md:px-[120px]">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col py-2  md:flex-row justify-between items-center border-t  bd-gray-20 gap-6 md:gap-0">
+        <div className="flex flex-col py-3  md:flex-row justify-between items-center border-t border-[#F1F1F1]/20 bd-gray-20 gap-6 md:gap-0">
           <div className="flex items-center gap-8">
             <Image src="/NHC.svg" alt="NHC Logo" width={31} height={32} />
             <Image

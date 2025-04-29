@@ -4,7 +4,7 @@ export default function NoResults() {
   return (
     <div className="flex flex-col items-center mt-10">
       <Image
-        src="/no-results.svg"
+        src="/no_result.svg"
         alt=""
         width={156}
         height={161}

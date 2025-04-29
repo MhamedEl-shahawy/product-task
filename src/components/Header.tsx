@@ -7,7 +7,7 @@ type HeaderProps = {
 
 export default function Header({ activePage }: HeaderProps) {
   return (
-    <header className="w-full h-20 bg-[#d9d9d9] px-6">
+    <header className="w-full h-20    bg-[#D5D5D5]/12 px-6">
       <div className="max-w-7xl mx-auto h-full flex items-center">
         <div className="mr-10">
           <Image
