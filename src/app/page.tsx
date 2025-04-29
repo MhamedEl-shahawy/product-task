@@ -20,7 +20,7 @@ export default async function Home({
       <Header activePage="products" />
 
       <main className="flex-1 flex flex-col items-center pt-[120px] pb-16 px-4">
-        <div className="w-full max-w-[739px] mx-auto">
+        <div className="w-full max-w-[995px] mx-auto">
           <h2 className="text-[#285f9d] text-lg font-medium font-['Inter'] mb-6 text-center">
             Search products by keyword
           </h2>
@@ -39,7 +39,7 @@ export default async function Home({
               {products?.products.length === 0 ? (
                 <NoResults />
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 justify-items-center">
+                <div className="grid w-full  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 justify-items-center">
                   {products?.products.map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}
@@ -49,8 +49,6 @@ export default async function Home({
           )}
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }
