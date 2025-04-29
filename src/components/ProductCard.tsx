@@ -8,7 +8,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="w-[301px] h-[312px] bg-white rounded-[10px] shadow-md overflow-hidden">
+    <div className="w-[301px] h-[312px] bg-white rounded-[10px] shadow-[0px_4px_13px_rgba(0,0,0,0.08)] overflow-hidden">
       <div className="relative h-[150px] mx-2 mt-2">
         <Image
           src={product.thumbnail}
@@ -24,7 +24,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <p className="text-[#7f7f7f] text-base line-clamp-2 font-['Inter']">
           {product.description}
         </p>
-        <p className="text-base font-['Inter']">
+        <p className="text-black text-base font-['Inter']">
           Price:{" "}
           <span className="text-[#285f9d] font-medium">${product.price}</span>
         </p>

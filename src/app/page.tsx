@@ -29,7 +29,7 @@ export default async function Home({
 
           {!!query && (
             <div className="mt-8">
-              <p className="text-base font-['Inter']">
+              <p className="text-black text-base font-['Inter']">
                 Total results count:{" "}
                 <span className="text-[#285f9d] font-bold">
                   {products?.total || 0}
@@ -49,6 +49,8 @@ export default async function Home({
           )}
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }
