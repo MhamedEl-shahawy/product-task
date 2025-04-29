@@ -2,14 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import Image from "next/image";
-import { Suspense } from "react";
-import { searchProducts } from "@/lib/api";
 import Header from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
 import ProductCard from "@/components/ProductCard";
 import NoResults from "@/components/NoResults";
-import Footer from "@/components/Footer";
 import Spinner from "@/components/Spinner";
 
 interface Product {
@@ -90,7 +86,7 @@ export default function Home() {
       <Header activePage="products" />
 
       <main className="flex-1 flex flex-col items-center pt-[120px] pb-16 px-4">
-        <div className="w-full max-w-[739px] mx-auto">
+        <div className="w-full max-w-[975px] mx-auto">
           <h2 className="text-[#285f9d] text-lg font-medium font-['Inter'] mb-6 text-center">
             Search products by keyword
           </h2>
@@ -134,8 +130,6 @@ export default function Home() {
           )}
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }
